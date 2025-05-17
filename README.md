@@ -3,11 +3,13 @@
 ## การติดตั้ง
 
 ### กรณีโปรเจ็คใหม่ต้องสร้าง โฟลเดอร์แล้วย้ายไป
+```bash
 docker-compose exec app mkdir -p /var/www/codeigniter
 docker-compose exec app composer create-project codeigniter4/appstarter /var/www/codeigniter
 
 จากนั้นคัดลอกไฟล์ทั้งหมดกลับมาที่ /var/www/html:
 docker-compose exec app cp -R /var/www/codeigniter/. /var/www/html/
+```
 
 ### กรณีมีโฟลเดอร์โปรเจ็คอยู่แล้ว
 1. สร้างโปรเจค CodeIgniter 4 ใหม่ หรือ clone โปรเจคที่มีอยู่แล้ว:

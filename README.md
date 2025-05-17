@@ -7,7 +7,7 @@
 docker-compose exec app mkdir -p /var/www/codeigniter
 docker-compose exec app composer create-project codeigniter4/appstarter /var/www/codeigniter
 
-จากนั้นคัดลอกไฟล์ทั้งหมดกลับมาที่ /var/www/html:
+# จากนั้นคัดลอกไฟล์ทั้งหมดกลับมาที่ /var/www/html:
 docker-compose exec app cp -R /var/www/codeigniter/. /var/www/html/
 ```
 
